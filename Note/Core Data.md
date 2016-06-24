@@ -25,8 +25,7 @@ Core Data 栈是由以下这些对象组成的：一个或者更多_管理对象
 * 一个提供缓存区给管理模型的_管理对象上下文_ 
 
   ​
-
-  ![single_persistent_stack-2](/Users/CTF/Downloads/single_persistent_stack-2.jpg)
+![single_persistent_stack-2](media/single_persistent_stack-2.jpg)
 
   ​
 
@@ -42,8 +41,7 @@ Core Data 栈是由以下这些对象组成的：一个或者更多_管理对象
 
 管理对象(managed object)是展现持久化存储(persistent store)中记录的模型对象。管理对象是 _NSManagedObject_类或者 _NSManagedObject_子类的实例。管理对象在管理对象上下文(managed object context)中注册。在任何给定的上下文中，最多只有一个管理对象的实例与持久化存储中的记录相对应。
 
- ![mapping_moc_record](/Users/CTF/Downloads/mapping_moc_record.jpg)
-
+![mapping_moc_record](media/mapping_moc_record.jpg)
 
 
 管理对象告诉实体描述对象实体展现什么。这样，_NSManagedObject_ 可以表示任何实体，你不需要一个实体的子类。如果你想要实现自定义行为才使用子类，例如计算导出的属性值或者实现确认的逻辑。
@@ -56,9 +54,7 @@ Core Data 栈是由以下这些对象组成的：一个或者更多_管理对象
 
 从你的角度来看，上下文在Core Data栈中是一个中心对象。它是你用来创建和查找管理对象，和管理撤销与重做操作的对象。在给定的上下文中，最多只有一个管理对象用来呈现任何给定的持久化存储中的记录。 
 
-
-
-![moc_record](/Users/CTF/Downloads/moc_record.jpg)
+![mapping_moc_record](media/mapping_moc_record-1.jpg)
 
 
 
@@ -74,7 +70,8 @@ Core Data 栈是由以下这些对象组成的：一个或者更多_管理对象
 
 这个助理在 Core Data Stack 中是一个中心对象。在很多应用程序中你只有一个单独的存储,但是在复杂的应用程序中可能有几个，每个都包含着不同的实体。持久化存储助理扮演的角色是管理这些存储(store)并且展现给管理对象上下文(managed object context)一个统一的存储。当你查找记录时，Core Data在所有的存储中查找结构,除非你指定你需要查找的存储。
 
-![advanced_persistent_stack](/Users/CTF/Downloads/advanced_persistent_stack.jpg)
+![advanced_persistent_stack](media/advanced_persistent_stack.jpg)
+
 
 
 
@@ -84,9 +81,7 @@ Core Data 栈是由以下这些对象组成的：一个或者更多_管理对象
 
 你发送消息给管理对象上下文(managed object context)来执行查询请求。上下文返回一个包含匹配请求的对象的数组。 
 
-
-
-![fetch_flow_of_data](/Users/CTF/Downloads/fetch_flow_of_data.jpg)
+![fetch_flow_of_data](media/fetch_flow_of_data.jpg)
 
 
 
@@ -102,9 +97,7 @@ Core Data 栈是由以下这些对象组成的：一个或者更多_管理对象
 
 管理对象模型(managed object model)你在你应用程序中使用的从同一设计图中描述的管理对象的对象集合。模型允许Core Data将持久化存储中的记录映射到你在程序中使用的管理对象。它是实体描述对象(_NSEntityDescription_ 的实例)的集合。实体描述描述了实体(你可以认为是数据库中的表)的名字，这个名字的类用来呈现在你应用程序中的实体，和实体所拥有的属性(标识和关系)。
 
-
-
- ![single_persistent_stack](/Users/CTF/Downloads/single_persistent_stack.jpg)
+![single_persistent_stack](media/single_persistent_stack-3.jpg)
 
 
 

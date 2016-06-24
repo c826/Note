@@ -3,12 +3,19 @@
 ###property
 - @property 后面可以有哪些修饰符？
 * 什么情况使用 weak 关键字，相比 assign 有什么不同？
+
+  *ARC模式下对象使用weak修饰，非对象使用assign修饰。weak使用完会自动释放并将指针至为nil，assign不会将指针至为nil。*
+
 * 怎么用 copy 关键字？
+
 * 这个写法会出什么问题： @property (copy) NSMutableArray *array;
+
 * 如何让自己的类用 copy 修饰符？如何重写带 copy 关键字的 setter？
 
 * @property 的本质是什么？ivar、getter、setter 是如何生成并添加到这个类中的
+
 * @protocol 和 category 中如何使用 @property
+
 * runtime 如何实现 weak 属性
 
 
@@ -16,9 +23,9 @@
 * [※]weak属性需要在dealloc中置nil么？
 * [※※]@synthesize和@dynamic分别有什么作用？
 * [※※※]ARC下，不显式指定任何属性关键字时，默认的关键字都
-哪些？
+  哪些？
 * [※※※]用@property声明的NSString（或NSArray，NSDictionary）经常使用copy关
- 键字，为什么？* 如果改用strong关键字，可能造成什么问题？ 
+   键字，为什么？* 如果改用strong关键字，可能造成什么问题？ 
 * [※※※]@synthesize合成实例变量的规则是什么？假如property名为foo，存在一个名为_foo的实例变量，那么还会自动合成新变量么？
 * [※※※※※]在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？
 
