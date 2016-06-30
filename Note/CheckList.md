@@ -1,14 +1,23 @@
 #CheckList
 
 ###property
-- @property 后面可以有哪些修饰符？
+* @property 后面可以有哪些修饰符？
+
+```
+nonatomic,atomic               原子性 非原子性
+assign,retain,copy,strong,weak 内存修饰
+readonly,readwrite             读写
+```
 * 什么情况使用 weak 关键字，相比 assign 有什么不同？
 
-  *ARC模式下对象使用weak修饰，非对象使用assign修饰。weak使用完会自动释放并将指针至为nil，assign不会将指针至为nil。*
+```
+  ARC模式下对象使用weak修饰，非对象使用assign修饰。weak使用完会自动释放并将指针至为nil，assign不会将指针至为nil。
+```
 
 * 怎么用 copy 关键字？
 
 * 这个写法会出什么问题： @property (copy) NSMutableArray *array;
+
 
 * 如何让自己的类用 copy 修饰符？如何重写带 copy 关键字的 setter？
 
