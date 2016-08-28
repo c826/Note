@@ -4,3 +4,19 @@
 
 
 
+
+CoreData
+
+* 添加页面 ->  record 创建 初始化title 与其他值
+* 收集箱   ->  根据条件查找， 
+* 整理    -> record 添加关系
+* 各清单  -> 根据关系查找  
+* 数据变化后动态显示
+
+
+swift
+
+
+* swift extension作用
+
+
