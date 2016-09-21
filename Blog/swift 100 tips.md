@@ -2,10 +2,10 @@
 
 ##柯里化 Currying
 
-柯里化: 把接受多个参数的函数简化为接受单一参数，并返回接收余下参数而且返回结果的新函数的函数。
-swift currying : 将影响函数结果的条件作为参数 并返回相应功能函数的 技术
+*柯里化*: 把接受多个参数的函数简化为接受单一参数，并返回接收余下参数而且返回结果的新函数的函数。
+Swift currying : 将*影响函数结果*的条件作为参数,并返回相应功能函数的技术。
 
-```objective-c
+``` Swift
 protocol TargetAction {
     func perfromAction()
 }
@@ -47,6 +47,7 @@ class control {
 
 ```
 
+## Sequence
 
 
 ##把protocol中的方法用mutating声明
@@ -54,7 +55,7 @@ mutating : 让方法可以修改struck 和 enum 中的变量的值。
 如果protocol 中的方法不用mutating来声明的话,如果struck或者enum实现该方法时就无法改变变量的值。
 protocol中的方法与struck中的方法都需要用mutating来声明。但是在class 中无需用mutating来声明protocol中方法
 
-```
+``` Swift
 protocol changeColor {
 	var color : UIColor {get}
 	
@@ -71,10 +72,15 @@ stuck car : changeColor{
 ```
 
 
+
+
+
+
+
 ##~~selector~~
 swift中使用#selector来调用selector
 
-```objective-c
+``` Swift
 let method = #selector(callMe)
 let oneParam = #selector(callMeWithOneParam(_:))
 let twoParam = #selector(callMeWithTwoParam(_:two:))
@@ -83,7 +89,7 @@ let twoParam = #selector(callMeWithTwoParam(_:two:))
 
 如果方法名在作用域内是唯一的，则可以使用方法名作为#selector参数。如果不是唯一则不能使用。编译会报错。
 
-```objective-c
+``` Swift
 let method = #selector(callMe)
 let oneParam = #selector(callMeWithOneParam)
 let twoParam = #selector(callMeWithTwoParam)
