@@ -49,6 +49,74 @@ class control {
 
 ## Sequence
 
+想要在类中使用For...in功能，就需要为类实现SequenceType协议的方法。接受SequenceType协议前又先需要实现GeneratorType协议。
+
+那么首先来实现一个generator。先定义一个实现了GeneratorType Protocol的类型。GeneratorType 需要制定一个 typealias Element，以及提供一个返回Element?的方法 next()。下面创建的是一个反向的Generator.
+
+``` Swift
+class ReverseGenerator<T>:GeneratorType{
+    typealias Element = T
+    
+    var array : [Element]
+    var currentIndex = 0
+    
+    init(array : [Element]){
+        self.array = array
+        currentIndex = array.count - 1
+    }
+    
+    func next() -> Element? {
+        if currentIndex < 0{
+            return nil
+        }else{
+            let  element = array[currentIndex]
+            currentIndex -= 1
+            return element
+        }  
+    }
+    
+}
+
+```
+
+然后我们来定义SequenceType。和GeneratorType很类似，不过换成指定一个 typealias Generator，以及提供一个返回Generator？的方法 generate()。
+
+``` Swift
+struct ReverseSequence<T>:SequenceType {
+    var array : [T]
+    
+    init(array : [T]){
+        self.array = array
+    }
+   
+    
+    typealias Generate = ReverseGenerator<T>
+    
+    func generate() -> Generate{
+        return ReverseGenerator(array: self.array)
+    }
+}
+```
+
+现在就能使用For...in来访问ReverseSequence类型了。
+
+``` Swift
+let array = [0,1,2,3,4]
+let sequence = ReverseSequence(array : array)
+for item in sequence{
+	print (item)
+}
+```
+
+``` Swift
+Output
+4
+3
+2
+1
+0
+```
+
 
 ##把protocol中的方法用mutating声明
 mutating : 让方法可以修改struck 和 enum 中的变量的值。

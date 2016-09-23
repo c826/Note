@@ -70,3 +70,58 @@ while let obj = g.next(){
      */
     print(obj)
 }
+
+
+// :##Tuple 多元组
+
+// :## autoclosure 和 ？？
+
+func logIfTrue(@autoclosure predicate : () -> Bool) {
+    if predicate() {
+        print("true")
+    }
+}
+
+logIfTrue(2>1)
+
+var index : Int?
+var start  = 1
+
+var current = index ?? start
+var r = true&&false
+
+
+// : Optional Chaining
+
+// : 操作符
+
+struct Vector2D {
+    var x : Float
+    var y : Float
+}
+
+let v1 = Vector2D(x: 1, y: 2)
+let v2 = Vector2D(x: 3, y: 4)
+
+func +(left:Vector2D , right : Vector2D) -> Vector2D {
+    return Vector2D(x: left.x + right.x, y: left.y + right.y)
+}
+
+func -(left:Vector2D , right: Vector2D) -> Vector2D {
+    return Vector2D(x: left.x - right.x, y: left.y - right.y)
+}
+
+let v3 = v2+v1
+let v4 = v2-v1
+
+infix operator +* {
+    associativity none
+    precedence 160
+}
+
+func +* (left:Vector2D , right : Vector2D) -> Double{
+    return Double(left.x * right.x + left.y*right.y)
+}
+
+
+
