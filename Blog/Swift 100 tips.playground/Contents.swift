@@ -123,5 +123,5 @@ func +* (left:Vector2D , right : Vector2D) -> Double{
     return Double(left.x * right.x + left.y*right.y)
 }
 
-
+// : ## 可变参数
 
