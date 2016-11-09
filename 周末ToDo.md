@@ -11,11 +11,16 @@
 - [ ] NSDate
 	
 	* NSDate 默认时区  如何切换时区 如何得到指定时间
-	* Swift 3 NSDate 与 Date区别
 
 - [ ] UIBarButtonItem
 	
 	*  UIBarButtonItem 结构 如何修改 font color
 	*  UINavigation appearance如何同一修改 BarButtonItem 样式
 	 
+
+
+# 问题答疑 
+1. Swift 中 NSDate 与 Date区别
+
+	Swift在Foundation框架上提供了一个*Date*结构体，用来桥接*NSDate*类。值类型*Date*提供了与引用类型*NSDate*一样的功能，并且在Swift代码中两者可以互相转换来与OC的API协同工作。这个行为与Swift如何桥接标准字符串，数字和集合类型与其对应的Foundation类。
 
