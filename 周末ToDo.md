@@ -17,6 +17,13 @@
 	*  UIBarButtonItem 结构 如何修改 font color
 	*  UINavigation appearance如何同一修改 BarButtonItem 样式
 	 
+- [x] 首页样式修改
+- [x] 点击弹出设置 (更多功能菜单)
+- [ ] 添加提示
+- [ ] 批量整理功能
+- [ ] 场景管理添加
+	 
+	 
 # github 系列
 
 - [ ] STMURLCache
