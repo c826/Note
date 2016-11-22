@@ -5,7 +5,8 @@
 	* hook Core Location 方法定位信息
 	* hook 企业微信判断位置方法
 
-- [ ] 微信 -> 自动抢红包 消息撤回
+- [ ] [消息撤回](http://yulingtianxia.com/blog/2016/05/06/Let-your-WeChat-for-Mac-never-revoke-messages/)
+- [ ] [自动抢红包](http://www.jianshu.com/p/189afbe3b429)
 
 # iDoList 系列
 - [ ] NSDate
