@@ -35,4 +35,17 @@
 * :bn: 多文件切换到前一个
 * :bp: 多文件切换到后一个
 
+![702042-d28dbdaf1393b2ba](media/702042-d28dbdaf1393b2ba.png)
+
+
+
+
+
+# proxy
+alias setproxy="export http_proxy=socks5://127.0.0.1:1080; export https_proxy=$http_proxy;"
+alias unsetproxy="unset http_proxy; unset https_proxy;"
+
+# Git proxy
+alias gitproxy="git config --global --replace-all https.proxy 'socks5://127.0.0.1:1080'; git config --global --replace-all http.proxy 'socks5://127.0.0.1:1080';"
+alias unsetgitproxy="git config --global --replace-all http.proxy ''; git config --global --replace-all https.proxy '';"
 
